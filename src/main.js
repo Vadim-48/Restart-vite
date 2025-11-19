@@ -1,25 +1,14 @@
-import { initPopupToggle } from './js/modules/popup.js';
+import { burger } from './js/modules/burger.js';
+import { initSlider } from './js/modules/main/slider.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  initPopupToggle();
+  burger();
+  initSlider();
 });
-// import './style.scss';
-// import logoUrl from './img/base/header/logo.svg';
-
-if (import.meta.hot) {
-  import.meta.hot.on('some-event', () => {
-    window.location.reload(); // повне перезавантаження сторінки
-  });
-}
 
 
-// const container = document.getElementById('logo-container');
-// const img = document.createElement('img');
-// img.src = logoUrl;   // підставляємо шлях від Vite
-// img.alt = 'Logo';
-// img.className = 'logo'; // можна додати клас для стилів
-// if (container) {
-//   container.appendChild(img);
-// } else {
-//   console.error('Container #logo-container not found');
+// if (import.meta.hot) {
+//   import.meta.hot.on('some-event', () => {
+//     window.location.reload(); // повне перезавантаження сторінки
+//   });
 // }

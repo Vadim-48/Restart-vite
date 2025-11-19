@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="UA">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth@75..100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.scss">
+    <link rel="stylesheet" href="./src/style.scss">
     <title>Restore</title>
   </head>
   <body class="body">
@@ -17,10 +17,13 @@
         </div>
           {{> base/burger}}
       </header>
+
       <main>
       <section class="hero">
-        <div class="container">
-        </div>
+<!--        <div class="container">-->
+            {{> main/hero}}
+<!--        </div>-->
+
       </section>
       </main>
       <footer class="footer" id="footer">
@@ -28,8 +31,8 @@
 
         </div>
       </footer>
-      </div>
+<!--      </div>-->
     <!--    <div id="app"></div>-->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js" defer></script>
   </body>
 </html>

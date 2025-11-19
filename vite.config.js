@@ -1,34 +1,86 @@
 import { defineConfig } from 'vite'
 import path from 'path'
-import handlebars from "vite-plugin-handlebars";
+import { resolve } from 'path'
+// import { viteStaticCopy } from 'vite-plugin-static-copy'
+import handlebars from 'vite-plugin-handlebars'
+import autoprefixer from 'autoprefixer'
+import viteImagemin from 'vite-plugin-imagemin'
+import { optimizeImages } from "./imageOptimizer";
+
+// import { readFileSync } from 'fs'
+
+// import {hero} from './src/config/partial.js'
+
+const pages = {
+  index:  resolve(__dirname, 'index.html'),
+  about:  resolve(__dirname, 'about.html'),
+}
 
 export default defineConfig({
+
+  base: '/Restore-vite/',  // name project in github
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer(),
+      ],
+    },
+  },
+
   plugins: [
-    handlebars({
-      partialDirectory: 'src/html', // 👈 тут лежать твої .html файли
+      handlebars({
+      partialDirectory: path.resolve(__dirname, 'src/html'),
     }),
+
+      // viteStaticCopy({
+      //     targets: [
+      //         {
+      //             // src: path.resolve(__dirname, 'src/image'),
+      //           src: 'src/image/**/*.{png,jpg,jpeg,gif,svg,webp,avif}',
+      //           dest: 'image'      // dist/image - path fo images
+      //         }
+      //     ]
+      // }),
+    // ViteImageOptimizer(DEFAULT_OPTIONS),
+
+    viteImagemin({ //  WebP
+      gifsicle: {},
+      optipng: {},
+      mozjpeg: { quality: 75 },
+      webp: { quality: 75 },
+    }),
+
     {
       name: 'handlebars-full-reload',
       handleHotUpdate({ file, server }) {
-        // Якщо змінюється будь-який .html файл у src/html — оновлюємо сторінку
         if (file.endsWith('.html')) {
-          console.log('🔁 Reload через зміну шаблону:', file);
           server.ws.send({
             type: 'full-reload',
             path: '*',
-          });
+          })
         }
       },
     },
   ],
+
   server: {
     watch: {
-      include: ['src/html/**/*.html', 'src/**/*.html'], // 👈 можна залишити і src/**/*.hbs про всяк
+      include: ['src/html/**/*.html', 'src/**/*.html'],
     },
   },
-});
+
+  build: {
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        ...pages,
+      },
+    },
+  },
+})
