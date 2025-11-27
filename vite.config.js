@@ -14,6 +14,8 @@ import viteImagemin from 'vite-plugin-imagemin'
 const pages = {
   index:  resolve(__dirname, 'index.html'),
   about:  resolve(__dirname, 'about.html'),
+  solutions:  resolve(__dirname, 'solutions.html'),
+  test:  resolve(__dirname, 'src/test/test.html'),
 }
 
 export default defineConfig({
@@ -42,8 +44,8 @@ export default defineConfig({
     viteImagemin({ //  WebP
       gifsicle: {},
       optipng: {},
-      mozjpeg: { quality: 75 },
-      webp: { quality: 75 },
+      mozjpeg: { quality: 100 },
+      webp: { quality: 100 },
     }),
 
     {

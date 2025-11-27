@@ -1,0 +1,40 @@
+.hero {
+
+    &__title {
+        visibility: hidden;
+    }
+
+    &__title-sub {
+    }
+
+    &__row {
+        display: grid;
+
+    }
+    &__row-1 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+    }
+    &__row-2 {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 45px;
+    }
+
+    &__col {
+        //flex: 1 0 220px;
+        text-align: center;
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    &__icon-text {
+        //text-align: center;
+    }
+    &__photo{
+        width: 100%;
+        aspect-ratio: 34/15;
+    }
+}
