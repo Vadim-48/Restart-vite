@@ -1,8 +1,5 @@
-.hero{
-    padding-top: 1022px;
-}
 .services {
-
+    margin-top: 200px;
     &__logo {
         display: block;
         margin: 72px auto 0 auto;
@@ -66,9 +63,7 @@
 }
 
 @media (max-width: 850px){
-    .hero{
-        padding-top: 276px;
-    }
+
     .services {
         margin-top: 130px;
         padding-inline: 13px;
@@ -104,9 +99,7 @@
     }
 }
 @media (max-width: 650px) {
-    .hero{
-        padding-top: 472px;
-    }
+
     .services {
         //margin-top: 24px;
         padding-inline: 0;
@@ -116,7 +109,6 @@
         &__row {
             grid-template-columns: 1fr;
             margin-top: 19px;
-            //gap: 3.3%;
             gap: 25px;
         }
         &__col{
@@ -137,9 +129,7 @@
 
         &__text {
             margin: 36px auto 0 auto;
-            //margin-top: 36px;
             width: 80%;
-            //width: 60%;
         }
     }
 }
