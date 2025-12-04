@@ -11,6 +11,7 @@ const pages = {
   index:  resolve(__dirname, 'index.html'),
   about:  resolve(__dirname, 'about.html'),
   solutions:  resolve(__dirname, 'solutions.html'),
+  stc:  resolve(__dirname, 'stc.html'),
 }
 
 export default defineConfig({
