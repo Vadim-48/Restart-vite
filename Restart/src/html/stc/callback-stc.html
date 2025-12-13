@@ -1,0 +1,44 @@
+<div class="callback__wrap">
+    {{> partial/picture
+        className="callback__photo"
+        alt="sto"
+        desktop="./src/image/stc/callback/form-1.jpg"
+        desktopWebp="./src/image/stc/callback/form-1.webp"
+        tablet="./src/image/stc/callback/form-1_1.jpg"
+        tabletWebp="./src/image/stc/callback/form-1_1.webp"
+        mobile="./src/image/stc/callback/form-1_2.jpg"
+        mobileWebp="./src/image/stc/callback/form-1_2.webp"
+    }}
+    <div class="callback__content">
+        <h2 class="callback__title">Заповніть форму для консультації або запису на діагностику/ремонт</h2>
+        <form action="#" name="phone-call" id="callForm" method="post" class="callback__form form">
+            <fieldset class="form__wrap">
+                <h3 class="form__title">Введіть, будь ласка, ваші контактні дані</h3>
+                <div class="form__content">
+                    <hr class="form__line">
+                    <label class="form__label required" for="userName">Ваше ім’я</label>
+                    <input class="form__placeholder" type="text" id="userName" placeholder="Введіть ваше ім’я" required>
+                    <p class="form__error-text" id="nameError"></p>
+                    <label class="form__label required" for="userPhone">Телефон</label>
+                    <input class="form__placeholder" type="tel" id="userPhone" placeholder="Ваш контактний номер телефону"  required>
+                    <p class="form__error-text" id="phoneError"></p>
+                    <label class="form__label required" for="userCity">Місто</label>
+                    <div class="form__select">
+                        <input type="text" id="userCity" class="form__select-input" placeholder="Оберіть місто зі списку" autocomplete="off">
+                        <img src="./src/image/stc/callback/select-arrow.svg" alt=">" class="form__select-arrow">
+                        <input type="hidden" class="form__select-hidden" name="city">
+                        <div class="form__select-options">
+                            <span>Київ</span>
+                            <span>Одеса</span>
+                            <span>Львів</span>
+                            <span>Харків</span>
+                            <span>Дніпро</span>
+                        </div>
+                    </div>
+                    <p class="form__error-text" id="cityError"></p>
+                    <button form="callForm" class="form__btn popup-link" data-popup-target="#popup">Замовити телефонний дзвінок</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

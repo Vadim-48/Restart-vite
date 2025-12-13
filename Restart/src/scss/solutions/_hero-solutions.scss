@@ -1,0 +1,205 @@
+.hero {
+    padding: 113px 0 50px 0;
+    background: #fff;
+
+    &__block-work{
+        margin-top: -80px;
+    }
+    &__title {
+
+    }
+
+    &__row {
+        position: relative;
+        z-index: 2;
+    }
+    &__row-parts {
+        display: grid;
+        margin-top: 44px;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+
+        & .hero__col {
+            //margin: 0;
+            width: 85%;
+            &:nth-child(3){
+                width: 72%;
+            }
+            //margin-inline: auto;
+        }
+    }
+    &__row-work {
+        //display: grid;
+        //grid-template-columns: repeat(6, 1fr);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        //& .hero__col {
+        //    //margin: 0;
+        //    width: 80%;
+        //    //margin-inline: auto;
+        //    &:nth-child(3), &:nth-child(4){
+        //        justify-self: center;
+        //    }
+        //    &:nth-child(5), &:nth-child(6){
+        //        justify-self: end;
+        //    }
+        //}
+        //display: flex;
+        //justify-content: space-between;
+        //gap: 4%;
+        & .hero__col{
+            //margin: 0;
+            width: 100%;
+            &:nth-child(1){
+                width: 185px;
+            }
+            &:nth-child(2){
+                width: 204px;
+            }
+            &:nth-child(3){
+                width: 211px;
+            }
+            &:nth-child(4){
+                width: 235px;
+            }
+            &:nth-child(5){
+                width: 209px;
+            }
+            &:nth-child(6){
+                width: 162px;
+            }
+        }
+    }
+
+    &__col {
+        text-align: center;
+        margin: 0;
+        //margin-inline: auto;
+        //width: 80%;
+    }
+
+    &__col-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    &__col-text {
+        margin-top: 10px;
+    }
+    &__photo{
+        width: 100%;
+        aspect-ratio: 34/15;
+        margin-top: -17px;
+    }
+    &__photo-work{
+        aspect-ratio: 8/3;
+        margin-top: -16px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .hero {
+        padding: 27px 0 20px 0;
+        margin-top: 18px;
+        &__container{
+            display: contents;
+        }
+        &__title{
+            margin-inline: 30px;
+        }
+        &__row {
+            //margin: 33px 30px 0 30px;
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+        &__block-work{
+            margin-top: -7px;
+        }
+        &__row-parts {
+            margin-top: 33px;
+            row-gap: 29px;
+            & .hero__col {
+                &:nth-child(5) {
+                    width: 90%;
+                }
+            }
+        }
+        &__row-work {
+            margin: 20px 20px 0 30px;
+            display: grid;
+            //grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            row-gap: 33px;
+            //margin-inline: 30px 20px;
+            & .hero__col:nth-child(n) {
+                width: 90%;
+            }
+        }
+        &__col {
+            //width: 86%;
+        }
+        &__photo{
+            margin-top: -4px;
+        }
+        &__photo-work{
+            margin-top: -10px;
+        }
+    }
+}
+@media (max-width: 650px) {
+   .hero{
+        &__row {
+            grid-template-columns: repeat(2, 1fr);
+        }
+       &__photo{
+           margin-top: 0;
+       }
+   }
+}
+@media (max-width: 450px) {
+    .hero{
+        padding: 36px 0 38px 0;
+        margin-top: 0;
+        &__block{
+            display: flex;
+            flex-direction: column;
+        }
+        &__title{
+            text-align: center;
+            order: 1;
+        }
+        &__row {
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: -24px;
+            row-gap: 24px;
+            order: 3;
+        }
+        &__col {
+            //width: 70%;
+        }
+        &__col-text {
+            margin-top: 5px;
+        }
+        &__photo{
+            margin-top: 69px;
+            order: 2;
+        }
+
+        &__block-work{
+            margin-top: 50px;
+        }
+        &__row-work {
+            margin: -6px 0 0 0;
+            row-gap: 30px;
+            & .hero__col{
+
+            }
+        }
+        &__photo-work{
+            margin-top: 12px;
+        }
+
+    }
+}

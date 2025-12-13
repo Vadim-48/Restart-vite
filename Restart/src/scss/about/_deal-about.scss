@@ -1,0 +1,73 @@
+.deal{
+    margin-top: 47px;
+    &__wrap{
+        display: flex;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+    }
+    &__photo{
+        flex-shrink: 0;
+        width: 50%;
+        border-radius: 4px;
+        //height: 176px;
+        height: 100%;
+    }
+    &__content{
+        //margin: 2.3% 0 0 -12%;
+        margin: auto 0 auto -12%;
+        //padding-right: 50px;
+        padding-right: 2%;
+    }
+    &__title{
+        font-size: 16px;
+        line-height: 150%;
+        color: #000;
+    }
+    &__btn{
+        width: 230px;
+        //margin-top: 20px;
+        margin-top: 2.2%;
+    }
+}
+
+@media (max-width: 1100px){
+    .deal{
+        margin-top: 39px;
+        &__wrap{
+            display: block;
+            padding-bottom: 34px;
+        }
+        &__photo{
+            width: 100%;
+            aspect-ratio: 35/9;
+            height: auto;
+        }
+        &__content{
+            margin: 28px 10px 0 15px;
+            padding-right: 0px;
+        }
+        &__btn{
+            margin-top: 26px;
+        }
+    }
+}
+
+
+@media (max-width: 650px){
+    .deal{
+        margin-top: 40px;
+        &__wrap{
+            padding-bottom: 36px;
+        }
+        &__photo{
+            aspect-ratio: 72/19;
+        }
+        &__content{
+            margin: 18px 10px 0 15px;
+        }
+        &__btn{
+            margin: 26px auto 0 auto;
+        }
+    }
+}
