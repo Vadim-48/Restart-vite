@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth@75..100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/scss/solutions.scss">
+    <title>Restart</title>
+</head>
+<body class="body">
+<header class="header" id="header">
+    {{> base/header}}
+    {{> base/burger}}
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero__container">
+            {{> solutions/hero-solutions}}
+        </div>
+    </section>
+
+</main>
+<footer class="footer" id="footer">
+    {{> base/footer}}
+</footer>
+
+<script type="module" src="src/js/solutions.js" defer></script>
+</body>
+</html>
