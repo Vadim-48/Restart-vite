@@ -16,7 +16,7 @@ const pages = {
 }
 
 export default defineConfig({
-  base: '/Restore-vite/',  // name project in github
+  base: '/Restart-vite/',  // name project in github
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
