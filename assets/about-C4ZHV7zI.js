@@ -1,0 +1,1 @@
+import{b as e}from"./burger-CDZVLKof.js";import{a as r,h as t}from"./header-scroll-Kk7tcZ0G.js";import{i as o}from"./youtube-play-CwVAovd4.js";document.addEventListener("DOMContentLoaded",()=>{e(),r(),t(),o({selector:".video__wrapper",autoplay:!0,stopOthers:!0})});
