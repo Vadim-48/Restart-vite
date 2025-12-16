@@ -37,6 +37,18 @@ export function initPopupToggle() {
         bodyLock();
       }
       curentPopup.classList.add('open');
+
+        // --- Очищення форми після відкриття попапу ---
+        const form = document.querySelector('#callForm');
+        if (form) {
+            form.reset(); // очищає всі поля
+            // очищаємо приховане поле для міста
+            const cityHidden = form.querySelector('input.form__select-hidden[name="city"]');
+            if (cityHidden) cityHidden.value = '';
+            // очищаємо тексти помилок
+            form.querySelectorAll('.form__error-text').forEach(el => el.textContent = '');
+        }
+
       curentPopup.addEventListener('click', function(e) {
         if (!e.target.closest('.popup__content')) {
           popupClose(e.target.closest('.popup'));

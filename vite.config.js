@@ -4,6 +4,7 @@ import { resolve } from 'path'
 import handlebars from 'vite-plugin-handlebars'
 import autoprefixer from 'autoprefixer'
 import viteImagemin from 'vite-plugin-imagemin'
+import sortMediaQueries from 'postcss-sort-media-queries';
 
 // import { optimizeImages } from "./imageOptimizer";
 
@@ -26,7 +27,10 @@ export default defineConfig({
   css: {
     postcss: {
       plugins:
-        [ autoprefixer(),],
+        [
+            autoprefixer(),
+            sortMediaQueries({ sort: 'desktop-first' }),
+        ],
     },
   },
 

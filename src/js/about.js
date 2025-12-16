@@ -1,7 +1,7 @@
 import { burger } from '@/js/modules/burger.js';
 import { activeMenuItem } from '@/js/modules/active-menu-item.js';
 import { headerScroll } from "@/js/modules/header-scroll.js";
-import { initVideoPlayer } from '@/js/modules/about/video-player.js';
+import { initYouTubePlayers } from '@/js/modules/about/youtube-play.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   burger();
@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headerScroll();
 
-  initVideoPlayer();
+    initYouTubePlayers({
+        selector: '.video__wrapper',
+        autoplay: true,
+        stopOthers: true
+    });
 
 });
+

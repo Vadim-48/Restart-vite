@@ -44,12 +44,8 @@
         &__wrapper {
             height: 277px;
         }
-    }
-}
-
-@media (max-width: 850px){
-    .video{
         &__play-icon {
+            margin-top: -13px;
             width: 41px;
             height: 41px;
         }
@@ -64,6 +60,7 @@
             display: contents;
         }
         &__play-icon {
+            margin-top: 0px;
             width: 100px;
             height: 100px;
         }

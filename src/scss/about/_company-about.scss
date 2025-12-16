@@ -85,6 +85,9 @@
 @media (max-width: 650px){
     .company {
         margin-top: 29px;
+        &__wrap {
+            padding: 34px 0 28px 0;
+        }
 
         &__title {
             font-size: 16px;
@@ -103,7 +106,7 @@
         &__row {
             margin: 33px 20px 0 15px;
             flex-direction: column;
-            gap: 25px;
+            gap: 22px;
         }
         &__list {
             margin-top: 4px;

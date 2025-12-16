@@ -33,18 +33,15 @@
 
 @media (max-width: 650px){
     .offers {
-        margin-top: 48px;
+        margin-top: 50px;
         &__wrap{
-            row-gap: 30px;
-            display: block;
+            row-gap: 40px;
+            //display: block;
+            grid-template-columns:1fr;
         }
         &__block{
-            margin-top: 40px;
             width: 98%;
             display: block;
-            &:first-child{
-                margin-top: 0;
-            }
         }
         &__text{
             margin-top: 3px;

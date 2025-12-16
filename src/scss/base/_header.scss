@@ -123,7 +123,7 @@
 
 @media (max-width: 1420px){
     .header{
-        height: 142px;
+        height: 124px;
         &__wrap{
             &.scrolled{
                 height: auto;
@@ -149,6 +149,9 @@
     }
 }
 @media (max-width: 650px){
+    .header {
+        height: 142px;
+    }
     .nav {
         &__wrapper {
             display: grid;

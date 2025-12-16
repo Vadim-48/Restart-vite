@@ -8,7 +8,8 @@ export function initPhoneMask() {
     placeholder: "",    // порожнє поле спочатку
     showMaskOnHover: false,
     showMaskOnFocus: false,
-    jitMasking: true    // ключовий параметр для поступового форматування
+    jitMasking: true,    // ключовий параметр для поступового форматування
+      allowPaste: true
   });
 
   im.mask(phoneInput);
