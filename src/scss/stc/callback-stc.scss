@@ -75,6 +75,7 @@
         align-items: center;
         justify-content: center;
         margin-inline: 10px;
+        padding-top: 5px;
     }
     &__content{
         margin-inline: 6%;
@@ -188,7 +189,7 @@
 
 @media (max-width: 1110px) {
     .callback {
-        margin-top: 45px;
+        margin-top: 47px;
         &__wrap {
             aspect-ratio: 71/55;
         }
