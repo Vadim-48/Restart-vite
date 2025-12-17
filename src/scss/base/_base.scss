@@ -68,7 +68,6 @@ picture {
 }
 
 .btn{
-    font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     text-align: center;
@@ -80,6 +79,7 @@ picture {
 
     border: 1px solid #cecece;
     border-radius: 100px;
+    transition: all 0.3s ease;
     &:focus-visible{
         background: rgba(112, 128, 144, 0.5);
     }
