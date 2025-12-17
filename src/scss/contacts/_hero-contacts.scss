@@ -30,6 +30,17 @@
         line-height: 1.5;
         color: #333;
     }
+    &__tel{
+        &:focus-visible{
+            color: #337AB7;
+        }
+        &:hover{
+            color: #337AB7;
+        }
+        &:active{
+            color: rgba(51, 122, 183, 0.5);
+        }
+    }
 
     &__map-wrap {
         //flex: 1 1 auto;
