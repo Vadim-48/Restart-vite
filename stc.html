@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wdth@75..100&display=swap" rel="stylesheet">
     <title>Restart</title>
-  <script type="module" crossorigin src="/Restart-vite/assets/stc-BsZHh7su.js"></script>
+  <script type="module" crossorigin src="/Restart-vite/assets/stc-DCgqXABI.js"></script>
   <link rel="modulepreload" crossorigin href="/Restart-vite/assets/burger-CDZVLKof.js">
   <link rel="modulepreload" crossorigin href="/Restart-vite/assets/header-scroll-Kk7tcZ0G.js">
   <link rel="modulepreload" crossorigin href="/Restart-vite/assets/youtube-play-CwVAovd4.js">
-  <link rel="stylesheet" crossorigin href="/Restart-vite/assets/stc-BZ54vKPA.css">
+  <link rel="stylesheet" crossorigin href="/Restart-vite/assets/stc-YdHh99mh.css">
 </head>
 <body class="body">
 <header class="header" id="header">
@@ -361,21 +361,25 @@
                 </picture>
                 <div class="callback__content">
                     <h2 class="callback__title">Заповніть форму для консультації або запису на діагностику/ремонт</h2>
-                    <form action="#" name="phone-call" id="callForm" method="post" class="callback__form form">
+                    <form action="#" name="phone-call" id="callForm" method="post" class="callback__form form" autocomplete="off">
                         <fieldset class="form__wrap">
                             <h3 class="form__title">Введіть, будь ласка, ваші контактні дані</h3>
                             <div class="form__content">
                                 <hr class="form__line">
                                 <label class="form__label required" for="userName">Ваше ім’я</label>
-                                <input class="form__placeholder" type="text" id="userName" placeholder="Введіть ваше ім’я" required>
-                                <p class="form__error-text" id="nameError"></p>
+                                <div class="form__input-wrap">
+                                    <input class="form__placeholder" type="text" id="userName" placeholder="Введіть ваше ім’я" autocomplete="off">
+                                    <p class="form__error-text" id="nameError"></p>
+                                </div>
                                 <label class="form__label required" for="userPhone">Телефон</label>
-                                <input class="form__placeholder" type="tel" id="userPhone" placeholder="Ваш контактний номер телефону"  required>
-                                <p class="form__error-text" id="phoneError"></p>
+                                <div class="form__input-wrap">
+                                    <input class="form__placeholder" type="tel" id="userPhone" placeholder="Ваш контактний номер телефону" autocomplete="new-password" >
+                                    <p class="form__error-text" id="phoneError"></p>
+                                </div>
                                 <label class="form__label required" for="userCity">Місто</label>
                                 <div class="form__select">
                                     <input type="text" id="userCity" class="form__select-input" placeholder="Оберіть місто зі списку" autocomplete="off">
-                                    <img src="data:image/svg+xml,%3csvg%20width='20'%20height='12'%20viewBox='0%200%2020%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.02808%201.09229L9.52808%209.09229L18.0281%201.09229'%20stroke='%23777777'%20stroke-width='3'/%3e%3c/svg%3e" alt="^" class="form__select-arrow">
+                                    <img src="data:image/svg+xml,%3csvg%20width='20'%20height='12'%20viewBox='0%200%2020%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.02808%201.09229L9.52808%209.09229L18.0281%201.09229'%20stroke='%23777777'%20stroke-width='3'/%3e%3c/svg%3e" alt="^" class="form__select-arrow" autocomplete="off">
                                     <input type="hidden" class="form__select-hidden" name="city">
                                     <div class="form__select-options">
                                         <span>Київ</span>
@@ -384,8 +388,8 @@
                                         <span>Харків</span>
                                         <span>Дніпро</span>
                                     </div>
+                                    <p class="form__error-text" id="cityError"></p>
                                 </div>
-                                <p class="form__error-text" id="cityError"></p>
                                 <button form="callForm" class="form__btn popup-link" data-popup-target="#popup">Замовити телефонний дзвінок</button>
                             </div>
                         </fieldset>
