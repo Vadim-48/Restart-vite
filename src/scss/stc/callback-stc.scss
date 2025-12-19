@@ -103,9 +103,7 @@
         width: 100%;
         aspect-ratio: 7/1;
         margin: 4px auto 0 auto;
-        &::placeholder{
-            padding-inline: 10px ;
-        }
+        padding-inline: 10px ;
         &:focus-visible{
             border: 3px solid #cecece;
         }
@@ -142,9 +140,7 @@
     &__select-input {
         @extend .form__placeholder;
         cursor: pointer;
-        &::placeholder{
-            padding-inline: 10px ;
-        }
+
         &:focus-visible{
             border: 3px solid #cecece;
         }
