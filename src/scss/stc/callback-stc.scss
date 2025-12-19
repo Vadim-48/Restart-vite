@@ -37,7 +37,7 @@
 
     &__form {
         width: 29%;
-        aspect-ratio: 98/117;
+        aspect-ratio: 98/116;
         margin: auto 5.5% auto;
         flex-shrink: 0;
         display: flex;
@@ -74,10 +74,8 @@
         height: 1px;
         background: #ebebeb;
     }
-
-    &__error-text{
-        position: absolute;
-        color: red;
+    &__input-wrap{
+        position: relative;
     }
 
     &__label{
@@ -111,6 +109,29 @@
         }
     }
 
+    &__error-text{
+        position: absolute;
+        z-index: 2;
+        display: none;
+        color: #fff;
+        background: red;
+        border-radius: 4px;
+        padding: 2px 8px;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 6px;
+            height: 6px;
+            background: red;
+            top: calc(0% - 3px);
+            left: 11px;
+            transform: rotate(45deg);
+        }
+        &:not(:empty) {
+            display: block;
+        }
+    }
     &__select{
         position: relative;
         width: 100%;
