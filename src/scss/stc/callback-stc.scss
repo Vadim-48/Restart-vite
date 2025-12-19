@@ -102,8 +102,10 @@
         border-radius: 2px;
         width: 100%;
         aspect-ratio: 7/1;
-        padding-left: 10px;
         margin: 4px auto 0 auto;
+        &::placeholder{
+            padding-inline: 10px ;
+        }
         &:focus-visible{
             border: 3px solid #cecece;
         }
@@ -117,6 +119,7 @@
         background: red;
         border-radius: 4px;
         padding: 2px 8px;
+        top: 75%;
         &::after{
             content: "";
             position: absolute;
@@ -139,6 +142,9 @@
     &__select-input {
         @extend .form__placeholder;
         cursor: pointer;
+        &::placeholder{
+            padding-inline: 10px ;
+        }
         &:focus-visible{
             border: 3px solid #cecece;
         }
@@ -242,7 +248,6 @@
         }
         &__placeholder {
             aspect-ratio: 6/1;
-            padding-left: 3px;
         }
         &__select{
             background-size: 14px 9px;
